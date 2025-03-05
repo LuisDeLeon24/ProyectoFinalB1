@@ -8,7 +8,12 @@ import { dbConnection } from './mongo.js';
 import { hash } from "argon2";
 
 const configurarMiddlewares = (app) => {
-   
+    app.use(express.urlencoded({extended: false}));
+    app.use(cors());
+    app.use(express.json());
+    app.use(helmet());
+    app.use(morgan('dev'));
+    app.use(limiter);
 }
 
 const configurarRutas = (app) =>{
