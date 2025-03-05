@@ -70,7 +70,7 @@ export const register = async (req, res) => {
             email: data.email,
             phone: data.phone,
             password: encryptedPassword,
-            role: data.role,
+            role: data.role || "CLIENT_ROLE",
             profile_picture
         });
 

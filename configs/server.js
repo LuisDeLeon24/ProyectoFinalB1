@@ -1,6 +1,7 @@
 'use strict';
 import limiter from '../src/middlewares/validar-cant-peticiones.js'
 import authRoutes from "../src/auth/auth.routes.js"
+import userRoutes from "../src/user/user.routes.js"
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
@@ -19,7 +20,7 @@ const configurarMiddlewares = (app) => {
 
 const configurarRutas = (app) =>{
     app.use("/proyectoFinal/auth", authRoutes);
-
+    app.use("/proyectoFinal/user", userRoutes);
 }
 
 const conectarDB = async () => {
