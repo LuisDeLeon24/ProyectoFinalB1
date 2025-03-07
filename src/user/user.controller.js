@@ -1,11 +1,11 @@
 import { response, request } from "express";
 import { hash } from "argon2";
 import User from "./user.model.js";
+import Category from "../category/category.model.js"; 
 
 export const getUsers = async (req = request, res = response) => {
     try {
         const { limite = 10, desde = 0 } = req.query;
-
         const query = { estado: true };
 
         const [total, users] = await Promise.all([
@@ -13,6 +13,7 @@ export const getUsers = async (req = request, res = response) => {
             User.find(query)
                 .skip(Number(desde))
                 .limit(Number(limite))
+                .populate('preferencias') // Agregado para traer las categorías completas
         ]);
 
         res.status(200).json({
@@ -30,10 +31,12 @@ export const getUsers = async (req = request, res = response) => {
     }
 };
 
+
 export const getUserById = async (req, res) => {
     try {
         const { id } = req.params;
-        const user = await User.findById(id);
+        const user = await User.findById(id).populate('preferencias'); // Ahora también carga las preferencias
+
         if (!user) {
             return res.status(404).json({
                 success: false,
@@ -55,10 +58,11 @@ export const getUserById = async (req, res) => {
     }
 };
 
+
 export const updateUser = async (req, res = response) => {
     try {
         const { id } = req.params;
-        const { password, ...data } = req.body;
+        const { password, preferencias, ...data } = req.body;
 
         if (password) {
             return res.status(400).json({
@@ -74,9 +78,21 @@ export const updateUser = async (req, res = response) => {
             });
         }
 
-        
+        // Validar que las preferencias sean IDs válidos de categorías
+        if (preferencias && preferencias.length > 0) {
+            const categoriasValidas = await Category.find({ _id: { $in: preferencias } });
 
-        const user = await User.findByIdAndUpdate(id, data, { new: true });
+            if (categoriasValidas.length !== preferencias.length) {
+                return res.status(400).json({
+                    success: false,
+                    message: "[Console] Error: Una o más categorías no son válidas."
+                });
+            }
+
+            data.preferencias = preferencias;
+        }
+
+        const user = await User.findByIdAndUpdate(id, data, { new: true }).populate('preferencias');
 
         if (!user) {
             return res.status(404).json({

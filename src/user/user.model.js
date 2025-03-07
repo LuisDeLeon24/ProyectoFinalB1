@@ -15,6 +15,10 @@ const UserSchema = Schema({
         required:[true,'Necesitamos tu contraseña brrrrro']
     },
     compras:[],
+    preferencias: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Category' 
+    }],
     role:{
         type:String,
         enum:['ADMIN_ROLE','CLIENT_ROLE'],
