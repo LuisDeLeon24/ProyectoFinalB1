@@ -3,16 +3,16 @@ import { Schema,model } from "mongoose";
 const UserSchema = Schema({
     username:{
         type:String,
-        required:[true,'Necesitamos tu username brrrrro.']
+        required:[true,'Escribe tu nombre por favor']
     },
     email:{
         type:String,
-        required:[true,'Necesitamos tu email brrrrro'],
+        required:[true,'Escribe tu email porfavor'],
         unique:true
     },
     password:{
         type:String,
-        required:[true,'Necesitamos tu contraseña brrrrro']
+        required:[true,'Escribe tu contraseña porfavor']
     },
     compras:[],
     preferencias: [{
