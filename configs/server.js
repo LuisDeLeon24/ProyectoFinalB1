@@ -3,6 +3,7 @@ import limiter from '../src/middlewares/validar-cant-peticiones.js'
 import authRoutes from "../src/auth/auth.routes.js"
 import userRoutes from "../src/user/user.routes.js"
 import cartRoutes from "../src/cart/cart.routes.js"
+import purchaseRoutes from "../src/purchases/purchase.routes.js"
 import categoryRoutes from "../src/category/category.routes.js"
 import productRoutes from "../src/product/product.routes.js"
 import express from 'express';
@@ -28,6 +29,7 @@ const configurarRutas = (app) =>{
     app.use("/proyectoFinal/category", categoryRoutes);
     app.use("/proyectoFinal/product", productRoutes);
     app.use("/proyectoFinal/cart", cartRoutes);
+    app.use("/proyectoFinal/purchase", purchaseRoutes);
 }
 
 const defaultCategory = async () => {

@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "67ca5f6b1245ecc508ab92ca"
+  },
+  "name": "Default",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T02:52:27.035Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T02:52:27.035Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ca64ff8016eb3c61e06f2d"
+  },
+  "name": "Vinilos",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T03:16:15.436Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T03:16:15.436Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ca650f8016eb3c61e06f30"
+  },
+  "name": "CDs",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T03:16:31.289Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T03:16:31.289Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ca65168016eb3c61e06f33"
+  },
+  "name": "Decoraciones",
+  "status": false,
+  "createdAt": {
+    "$date": "2025-03-07T03:16:38.852Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T03:43:41.376Z"
+  }
+}]

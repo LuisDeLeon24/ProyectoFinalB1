@@ -13,7 +13,7 @@ export const getUsers = async (req = request, res = response) => {
             User.find(query)
                 .skip(Number(desde))
                 .limit(Number(limite))
-                .populate('preferencias') // Agregado para traer las categorías completas
+                .populate('preferencias')
         ]);
 
         res.status(200).json({
@@ -35,7 +35,7 @@ export const getUsers = async (req = request, res = response) => {
 export const getUserById = async (req, res) => {
     try {
         const { id } = req.params;
-        const user = await User.findById(id).populate('preferencias'); // Ahora también carga las preferencias
+        const user = await User.findById(id).populate('preferencias'); 
 
         if (!user) {
             return res.status(404).json({
@@ -78,7 +78,7 @@ export const updateUser = async (req, res = response) => {
             });
         }
 
-        // Validar que las preferencias sean IDs válidos de categorías
+        
         if (preferencias && preferencias.length > 0) {
             const categoriasValidas = await Category.find({ _id: { $in: preferencias } });
 
@@ -128,7 +128,7 @@ export const updatePassword = async (req, res) => {
             });
         }
 
-        // Verificar que la nueva contraseña no sea igual a la antigua
+       
         if (password === newPassword) {
             return res.status(400).json({
                 success: false,
@@ -136,7 +136,7 @@ export const updatePassword = async (req, res) => {
             });
         }
 
-        // Buscar al usuario por su ID
+     
         const user = await User.findById(id);
         if (!user) {
             return res.status(404).json({
@@ -145,10 +145,10 @@ export const updatePassword = async (req, res) => {
             });
         }
 
-        // Encriptar la nueva contraseña
+      
         const encryptedPassword = await hash(newPassword);
 
-        // Actualizar la contraseña en la base de datos
+        
         user.password = encryptedPassword;
         await user.save();
 

@@ -12,7 +12,7 @@ const ProductSchema = new mongoose.Schema({
     price: {
         type: Number,
         required: [true, "[Model] El Precio es Obligatorio"],
-        min: [0, "Model] El Precio no puede ser menor a 0"]
+        min: [0, "[Model] El Precio no puede ser menor a 0"]
     },
     category: {
         type: mongoose.Schema.Types.ObjectId,

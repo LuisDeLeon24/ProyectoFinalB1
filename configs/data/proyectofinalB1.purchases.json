@@ -1,0 +1,259 @@
+[{
+  "_id": {
+    "$oid": "67ca93ee7ec97f566407cd4d"
+  },
+  "user": {
+    "$oid": "67ca60378016eb3c61e06f1f"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67ca7e6b57b7494f179d555e"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "67ca93ee7ec97f566407cd4e"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67ca7e2c57b7494f179d555a"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "67ca93ee7ec97f566407cd4f"
+      }
+    }
+  ],
+  "total": 2700,
+  "status": "canceled",
+  "shippingAddress": "1234 Calle Ficticia,Edificio Los Soles,Apt. 56B, Zona 10,Ciudad de Guatemala,Guatemala, C.A.Código Postal: 01010",
+  "paymentMethod": "credit_card",
+  "account": "$argon2id$v=19$m=65536,t=3,p=4$qvrqN1UQjYF9k9gxw4hCpw$tiTAkM9Iyzym1mCyZ2o+WcFF7MMC4atHrOik9cxobus",
+  "date": {
+    "$date": "2025-03-07T06:36:30.699Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cbd0962d1e5e067e829b7b"
+  },
+  "user": {
+    "$oid": "67cbd01f2d1e5e067e829b69"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67ca7e6b57b7494f179d555e"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "67cbd0962d1e5e067e829b7c"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67ca7e2c57b7494f179d555a"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "67cbd0962d1e5e067e829b7d"
+      }
+    }
+  ],
+  "total": 2700,
+  "status": "paid",
+  "shippingAddress": "1234 Calle KinalZZZ,Edificio Los Soles,Apt. 56B, Zona 10,Ciudad de Guatemala,Guatemala, C.A.Código Postal: 01010",
+  "paymentMethod": "credit_card",
+  "account": "4111111111111111",
+  "date": {
+    "$date": "2025-03-08T05:07:34.047Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cbda96119190bb9dd646f1"
+  },
+  "user": {
+    "$oid": "67cbd01f2d1e5e067e829b69"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67ca7e6b57b7494f179d555e"
+      },
+      "quantity": 6,
+      "_id": {
+        "$oid": "67cbda96119190bb9dd646f2"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67ca7e2c57b7494f179d555a"
+      },
+      "quantity": 2,
+      "_id": {
+        "$oid": "67cbda96119190bb9dd646f3"
+      }
+    }
+  ],
+  "total": 5400,
+  "status": "paid",
+  "shippingAddress": "1234 Calle Ficticia,Edificio Los Soles,Apt. 56B, Zona 10,Ciudad de Guatemala,Guatemala, C.A.Código Postal: 01010",
+  "paymentMethod": "credit_card",
+  "account": "$argon2id$v=19$m=65536,t=3,p=4$w117Dadr2j+0k8BbRI5fpA$hTkY9ONs1Ka3NN3KYRABDIEnyVrwdNMS7pciKWBmFRg",
+  "date": {
+    "$date": "2025-03-08T05:50:14.421Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cbdb5a52be3c35f811c732"
+  },
+  "user": {
+    "$oid": "67cbd01f2d1e5e067e829b69"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67ca7e6b57b7494f179d555e"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "67cbdb5a52be3c35f811c733"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67ca7e2c57b7494f179d555a"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "67cbdb5a52be3c35f811c734"
+      }
+    }
+  ],
+  "total": 2700,
+  "status": "paid",
+  "shippingAddress": "1234 Calle Ficticia,Edificio Los Soles,Apt. 56B, Zona 10,Ciudad de Guatemala,Guatemala, C.A.Código Postal: 01010",
+  "paymentMethod": "credit_card",
+  "account": "$argon2id$v=19$m=65536,t=3,p=4$t8wm82W4O/5WcMzaRWVB0g$4ClcEYvrwEjoWTnf8B6s1Zn+7H4er1w+rrmM4LbVMoc",
+  "date": {
+    "$date": "2025-03-08T05:53:30.693Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cbdc40fe7a822b4e24741b"
+  },
+  "user": {
+    "$oid": "67cbd01f2d1e5e067e829b69"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67ca7e6b57b7494f179d555e"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "67cbdc40fe7a822b4e24741c"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67ca7e2c57b7494f179d555a"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "67cbdc40fe7a822b4e24741d"
+      }
+    }
+  ],
+  "total": 2700,
+  "status": "paid",
+  "shippingAddress": "1234 Calle Ficticia,Edificio Los Soles,Apt. 56B, Zona 10,Ciudad de Guatemala,Guatemala, C.A.Código Postal: 01010",
+  "paymentMethod": "credit_card",
+  "account": "$argon2id$v=19$m=65536,t=3,p=4$AZMwTjrXTZvH34fxg9a5jg$YSv/xqDcrI+3ZzyPSp5QRuaO8BKY7/7U4OYfinEAHJU",
+  "date": {
+    "$date": "2025-03-08T05:57:20.756Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cbdd1211312bc30e633717"
+  },
+  "user": {
+    "$oid": "67cbd01f2d1e5e067e829b69"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67ca7e6b57b7494f179d555e"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "67cbdd1211312bc30e633718"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67ca7e2c57b7494f179d555a"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "67cbdd1211312bc30e633719"
+      }
+    }
+  ],
+  "total": 2700,
+  "status": "paid",
+  "shippingAddress": "1234 Calle Ficticia,Edificio Los Soles,Apt. 56B, Zona 10,Ciudad de Guatemala,Guatemala, C.A.Código Postal: 01010",
+  "paymentMethod": "credit_card",
+  "account": "$argon2id$v=19$m=65536,t=3,p=4$HdtIxjQO3aOVbDHIm5JEiA$4TY0FYPvzeqaLSUMGl9X5dR44W71zsZLeRc/NlQWirk",
+  "date": {
+    "$date": "2025-03-08T06:00:50.544Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cbde1ce0e635b1f9543789"
+  },
+  "user": {
+    "$oid": "67cbd01f2d1e5e067e829b69"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67ca7e6b57b7494f179d555e"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "67cbde1ce0e635b1f954378a"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67ca7e2c57b7494f179d555a"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "67cbde1ce0e635b1f954378b"
+      }
+    }
+  ],
+  "total": 2700,
+  "status": "paid",
+  "shippingAddress": "1234 Calle Ficticia,Edificio Los Soles,Apt. 56B, Zona 10,Ciudad de Guatemala,Guatemala, C.A.Código Postal: 01010",
+  "paymentMethod": "credit_card",
+  "account": "$argon2id$v=19$m=65536,t=3,p=4$VpRAMQlKWYcbTLAfoEykMQ$i5ZhYrTRxXVqdEHMLM7UkGbKRjsNEXwATsHDDbGr2VU",
+  "date": {
+    "$date": "2025-03-08T06:05:16.557Z"
+  },
+  "__v": 0
+}]

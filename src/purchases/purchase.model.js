@@ -57,4 +57,4 @@ PurchaseSchema.methods.toJSON = function() {
     return bill;
 };
 
-export default mongoose.model("Purchase", BillSchema);
+export default mongoose.model("Purchase", PurchaseSchema);

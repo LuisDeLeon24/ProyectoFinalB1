@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "67ca60378016eb3c61e06f1f"
+  },
+  "username": "Ldeleon",
+  "email": "ldeleon@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$8rIhHcpJx6qhI4N2iPs1Tg$BqZrC6Di+dp8tmvnKZKFfrwKJOz1NEgerW2djEvy6Nc",
+  "compras": [],
+  "preferencias": [
+    {
+      "$oid": "67ca5f6b1245ecc508ab92ca"
+    }
+  ],
+  "role": "ADMIN_ROLE",
+  "estado": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cbd01f2d1e5e067e829b69"
+  },
+  "username": "Sujeto",
+  "email": "sujeto@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$3G7NLamrog8T10WkNJ2t4w$IPHXmcWmjxdPBNlbKvIa2om1gR55ghUIseM6IYiHYkU",
+  "compras": [],
+  "preferencias": [
+    {
+      "$oid": "67ca5f6b1245ecc508ab92ca"
+    }
+  ],
+  "role": "CLIENT_ROLE",
+  "estado": true,
+  "__v": 0
+}]

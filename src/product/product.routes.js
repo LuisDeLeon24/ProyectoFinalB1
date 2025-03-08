@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { check } from "express-validator";
 import { query } from "express-validator";
-import { newProduct, getProducts, searchProduct, delProduct, updateProduct} from "./product.controller.js";
+import { newProduct, getProducts, searchProduct, delProduct, updateProduct,getProductsCat} from "./product.controller.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 import {validarRol} from "../middlewares/validar-roles.js"
@@ -33,6 +33,17 @@ router.get(
       validarCampos,
     ],
     getProducts
+  );
+  router.get(
+    '/getProductsCat',
+    [
+      query('limite').optional().isInt({ min: 1 }).withMessage('Limite debe ser un número mayor a 0'),
+      query('desde').optional().isInt({ min: 0 }).withMessage('Desde debe ser un número mayor o igual a 0'),
+      query('sort').optional().isIn(['name', 'price', 'stock']).withMessage('Orden de sort no válido'),
+      query('order').optional().isIn(['asc', 'desc']).withMessage('Orden debe ser "asc" o "desc"'),
+      validarCampos,
+    ],
+    getProductsCat
   );
 
 router.get(

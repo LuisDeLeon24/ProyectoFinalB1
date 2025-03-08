@@ -1,0 +1,932 @@
+{
+	"info": {
+		"_postman_id": "04655660-bdec-4975-b868-75b5ad89549d",
+		"name": "ProyectoFinalB1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42193127"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Ldeleon\",\r\n    \"email\":\"ldeleon@gmail.com\",\r\n    \"phone\": \"4567-6789\",\r\n    \"password\":\"12345678\",\r\n    \"role\": \"ADMIN_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Pruebas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Sujeto de Pruebas\",\r\n    \"username\":\"Sujeto\",\r\n    \"email\":\"sujeto@gmail.com\",\r\n    \"phone\": \"4567-6789\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ldeleon@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"username\":\"Ldeleon\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sujeto@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"username\":\"Sujeto\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "ListarUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/user/getUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"user",
+								"getUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/user/findUser/67ca60378016eb3c61e06f1f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"user",
+								"findUser",
+								"67ca60378016eb3c61e06f1f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarUsuarios",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZTA4MjlhZjlmZDE4MWQ4OWE4NmUiLCJpYXQiOjE3NDExNTY4ODEsImV4cCI6MTc0MTE2MDQ4MX0.4gEzC7pbKcfrFmMlsBQOiPX-1Z8_JjJcGLgaGUeA3zg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Sujeto2121\",\r\n    \"email\":\"sujeto@gmail.com\",\r\n    \"phone\": \"4567-6789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/user/updateUser/67c7ec2b4c82a0aa18e9279f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"user",
+								"updateUser",
+								"67c7ec2b4c82a0aa18e9279f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarContraseña",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZTA4MjlhZjlmZDE4MWQ4OWE4NmUiLCJpYXQiOjE3NDExNTY4ODEsImV4cCI6MTc0MTE2MDQ4MX0.4gEzC7pbKcfrFmMlsBQOiPX-1Z8_JjJcGLgaGUeA3zg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"12345678\",\r\n    \"newPassword\":\"Informatica2022\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/user/updatePassword/67c7ec2b4c82a0aa18e9279f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"user",
+								"updatePassword",
+								"67c7ec2b4c82a0aa18e9279f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarUsuario",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZTA4MjlhZjlmZDE4MWQ4OWE4NmUiLCJpYXQiOjE3NDExNTY4ODEsImV4cCI6MTc0MTE2MDQ4MX0.4gEzC7pbKcfrFmMlsBQOiPX-1Z8_JjJcGLgaGUeA3zg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"Informatica2022\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/user/delUser/67c7ec2b4c82a0aa18e9279f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"user",
+								"delUser",
+								"67c7ec2b4c82a0aa18e9279f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "CrearCategorias",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhNjAzNzgwMTZlYjNjNjFlMDZmMWYiLCJpYXQiOjE3NDEzMTczNjQsImV4cCI6MTc0MTMyMDk2NH0.2zZwbz70bwo578CRAZrtbYYoElMtQXPwC6nSX41KHOE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Casettes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/category/newCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"category",
+								"newCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarCategorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/category/getCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"category",
+								"getCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarCategoria",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhNjAzNzgwMTZlYjNjNjFlMDZmMWYiLCJpYXQiOjE3NDEzMTczNjQsImV4cCI6MTc0MTMyMDk2NH0.2zZwbz70bwo578CRAZrtbYYoElMtQXPwC6nSX41KHOE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Decoraciones\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/category/updateCategory/67ca65168016eb3c61e06f33",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"category",
+								"updateCategory",
+								"67ca65168016eb3c61e06f33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarCategoria",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhNjAzNzgwMTZlYjNjNjFlMDZmMWYiLCJpYXQiOjE3NDEzMTczNjQsImV4cCI6MTc0MTMyMDk2NH0.2zZwbz70bwo578CRAZrtbYYoElMtQXPwC6nSX41KHOE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/category/delCategory/67ca65168016eb3c61e06f33",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"category",
+								"delCategory",
+								"67ca65168016eb3c61e06f33"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "CrearProducto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhNjAzNzgwMTZlYjNjNjFlMDZmMWYiLCJpYXQiOjE3NDEzMjM3MzIsImV4cCI6MTc0MTMyNzMzMn0._U-Plk0224xGWv6uV9fyKAk9NQ2ARe2nbQjnQo8WCU8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Beethoven Complete Symphonies Leonard Bernstein\",\r\n    \"description\":\"3LP Full Album\",\r\n    \"price\":\"700\",\r\n    \"category\":\"CDs\",\r\n    \"stock\":\"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/product/newProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"product",
+								"newProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarProductos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/product/getProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"product",
+								"getProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarProductosCat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/product/getProductsCat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"product",
+								"getProductsCat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarProducto",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhNjAzNzgwMTZlYjNjNjFlMDZmMWYiLCJpYXQiOjE3NDEzMjE4ODIsImV4cCI6MTc0MTMyNTQ4Mn0.e89Q-vO1ZeoNN3-4Bcj--1JwLsKSBbK7d9K9ltNOmrU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/product/findProduct/67ca6e2effd52d6c23260ea1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"product",
+								"findProduct",
+								"67ca6e2effd52d6c23260ea1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarProducto",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhNjAzNzgwMTZlYjNjNjFlMDZmMWYiLCJpYXQiOjE3NDEzMjE4ODIsImV4cCI6MTc0MTMyNTQ4Mn0.e89Q-vO1ZeoNN3-4Bcj--1JwLsKSBbK7d9K9ltNOmrU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Scriabin Complete Sonatas - Vincenzo Maltempo27438347834\",\r\n    \"description\":\"LP Full Album\",\r\n    \"price\":\"200\",\r\n    \"category\":\"Vinilos\",\r\n    \"stock\":\"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/product/updateProduct/67ca6e2effd52d6c23260ea1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"product",
+								"updateProduct",
+								"67ca6e2effd52d6c23260ea1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarProducto",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhNjAzNzgwMTZlYjNjNjFlMDZmMWYiLCJpYXQiOjE3NDEzMjE4ODIsImV4cCI6MTc0MTMyNTQ4Mn0.e89Q-vO1ZeoNN3-4Bcj--1JwLsKSBbK7d9K9ltNOmrU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/product/delProduct/67ca6e2effd52d6c23260ea1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"product",
+								"delProduct",
+								"67ca6e2effd52d6c23260ea1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "AddCart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiZDAxZjJkMWU1ZTA2N2U4MjliNjkiLCJpYXQiOjE3NDE0MTAzNjIsImV4cCI6MTc0MTQxMzk2Mn0.hpIGADh6gIT4fN8wTkk3fnNVvW-Mato-Uh_w60Ohs6o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"products\": [\r\n        {\r\n            \"productId\": \"67ca7e6b57b7494f179d555e\",\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"productId\": \"67ca7e2c57b7494f179d555a\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/cart/addCart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"cart",
+								"addCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VerCart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhNjAzNzgwMTZlYjNjNjFlMDZmMWYiLCJpYXQiOjE3NDEzMjM3MzIsImV4cCI6MTc0MTMyNzMzMn0._U-Plk0224xGWv6uV9fyKAk9NQ2ARe2nbQjnQo8WCU8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/cart/getCart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"cart",
+								"getCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "QuitarCart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhNjAzNzgwMTZlYjNjNjFlMDZmMWYiLCJpYXQiOjE3NDEzMjM3MzIsImV4cCI6MTc0MTMyNzMzMn0._U-Plk0224xGWv6uV9fyKAk9NQ2ARe2nbQjnQo8WCU8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/cart/revoCart/67ca7e2c57b7494f179d555a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"cart",
+								"revoCart",
+								"67ca7e2c57b7494f179d555a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ClearCart",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/cart/revoCart/67ca7e2c57b7494f179d555a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"cart",
+								"revoCart",
+								"67ca7e2c57b7494f179d555a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Purchase",
+			"item": [
+				{
+					"name": "newPurchase",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiZDAxZjJkMWU1ZTA2N2U4MjliNjkiLCJpYXQiOjE3NDE0MTAzNjIsImV4cCI6MTc0MTQxMzk2Mn0.hpIGADh6gIT4fN8wTkk3fnNVvW-Mato-Uh_w60Ohs6o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cartId\": \"67cbd05c2d1e5e067e829b6e\",\r\n  \"shippingAddress\": \"1234 Calle Ficticia,Edificio Los Soles,Apt. 56B, Zona 10,Ciudad de Guatemala,Guatemala, C.A.Código Postal: 01010\",\r\n  \"paymentMethod\": \"credit_card\",\r\n  \"account\": \"4111111111111111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/purchase/newPurchase",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"purchase",
+								"newPurchase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPurchases",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhNjAzNzgwMTZlYjNjNjFlMDZmMWYiLCJpYXQiOjE3NDEzMjg5MDMsImV4cCI6MTc0MTMzMjUwM30.SH8CVuXk7Mafp6gSccDVsmw6ZHNDoOVU0MHlag61h_8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/purchase/userPurchases",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"purchase",
+								"userPurchases"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindPurchase",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhNjAzNzgwMTZlYjNjNjFlMDZmMWYiLCJpYXQiOjE3NDE0MTAwNjMsImV4cCI6MTc0MTQxMzY2M30.qs31FEBb4ZqOVve0UR8gnN8A0iyXAYhT05ZxTY8D190",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/purchase/findPurchase/67ca93ee7ec97f566407cd4d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"purchase",
+								"findPurchase",
+								"67ca93ee7ec97f566407cd4d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pagar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiZDAxZjJkMWU1ZTA2N2U4MjliNjkiLCJpYXQiOjE3NDE0MTM3NDQsImV4cCI6MTc0MTQxNzM0NH0.w4oLNLW0bPTOmEUneNcCxeGldD6FMDj_X6-ohOJfbHU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/purchase/paidPurchase/67cbde1ce0e635b1f9543789",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"purchase",
+								"paidPurchase",
+								"67cbde1ce0e635b1f9543789"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "undoPurchase",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhNjAzNzgwMTZlYjNjNjFlMDZmMWYiLCJpYXQiOjE3NDE0MTAwNjMsImV4cCI6MTc0MTQxMzY2M30.qs31FEBb4ZqOVve0UR8gnN8A0iyXAYhT05ZxTY8D190",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/purchase/undoPurchase/67ca93ee7ec97f566407cd4d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"purchase",
+								"undoPurchase",
+								"67ca93ee7ec97f566407cd4d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarPurchase",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhNjAzNzgwMTZlYjNjNjFlMDZmMWYiLCJpYXQiOjE3NDE0MTAwNjMsImV4cCI6MTc0MTQxMzY2M30.qs31FEBb4ZqOVve0UR8gnN8A0iyXAYhT05ZxTY8D190",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cartId\": \"67cbd05c2d1e5e067e829b6e\",\r\n  \"products\":[],\r\n  \"shippingAddress\": \"1234 Calle KinalZZZ,Edificio Los Soles,Apt. 56B, Zona 10,Ciudad de Guatemala,Guatemala, C.A.Código Postal: 01010\",\r\n  \"paymentMethod\": \"credit_card\",\r\n  \"account\": \"4111111111111111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/purchase/updatePurchase/67cbd0962d1e5e067e829b7b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"purchase",
+								"updatePurchase",
+								"67cbd0962d1e5e067e829b7b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HistorialCompras",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiZDAxZjJkMWU1ZTA2N2U4MjliNjkiLCJpYXQiOjE3NDE0MTQzMTIsImV4cCI6MTc0MTQxNzkxMn0.8_yeYBuh98guIKxkp0SrJypTbvrnimsWqOUtQucRIYg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectoFinal/purchase/purchasesU/67cbd01f2d1e5e067e829b69",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectoFinal",
+								"purchase",
+								"purchasesU",
+								"67cbd01f2d1e5e067e829b69"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

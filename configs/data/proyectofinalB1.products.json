@@ -1,0 +1,95 @@
+[{
+  "_id": {
+    "$oid": "67ca6e2effd52d6c23260ea1"
+  },
+  "name": "Scriabin Complete Sonatas - Vincenzo Maltempo27438347834",
+  "description": "LP Full Album",
+  "price": 200,
+  "category": {
+    "$oid": "67ca64ff8016eb3c61e06f2d"
+  },
+  "stock": 0,
+  "status": false,
+  "createdAt": {
+    "$date": "2025-03-07T03:55:26.979Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T04:38:58.287Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ca7df457b7494f179d5552"
+  },
+  "name": "Piazzola Para el Angel",
+  "description": "LP Full Album",
+  "price": 300,
+  "category": {
+    "$oid": "67ca650f8016eb3c61e06f30"
+  },
+  "stock": 85,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T05:02:44.207Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T05:02:44.207Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ca7e1457b7494f179d5556"
+  },
+  "name": "Scheherezade Alexander Lazarev",
+  "description": "LP Full Album",
+  "price": 600,
+  "category": {
+    "$oid": "67ca64ff8016eb3c61e06f2d"
+  },
+  "stock": 1000,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T05:03:16.529Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T05:03:16.529Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ca7e2c57b7494f179d555a"
+  },
+  "name": "Mignome Taeko Onuki",
+  "description": "CD Full Album",
+  "price": 600,
+  "category": {
+    "$oid": "67ca650f8016eb3c61e06f30"
+  },
+  "stock": 1011,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T05:03:40.077Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T05:30:40.594Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ca7e6b57b7494f179d555e"
+  },
+  "name": "Beethoven Complete Symphonies Leonard Bernstein",
+  "description": "3LP Full Album",
+  "price": 700,
+  "category": {
+    "$oid": "67ca650f8016eb3c61e06f30"
+  },
+  "stock": 34,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T05:04:43.503Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T05:30:40.592Z"
+  }
+}]

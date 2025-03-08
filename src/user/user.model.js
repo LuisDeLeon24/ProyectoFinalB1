@@ -1,39 +1,39 @@
-import { Schema,model } from "mongoose";
+import { Schema, model } from "mongoose";
 
 const UserSchema = Schema({
-    username:{
-        type:String,
-        required:[true,'Escribe tu nombre por favor']
+    username: {
+        type: String,
+        required: [true, "[model] Escribe tu nombre por favor"]
     },
-    email:{
-        type:String,
-        required:[true,'Escribe tu email porfavor'],
-        unique:true
+    email: {
+        type: String,
+        required: [true, "[model] Escribe tu email porfavor"],
+        unique: true
     },
-    password:{
-        type:String,
-        required:[true,'Escribe tu contraseña porfavor']
+    password: {
+        type: String,
+        required: [true, "[model] Escribe tu contraseña porfavor"]
     },
-    compras:[],
+    compras: [],
     preferencias: [{
         type: Schema.Types.ObjectId,
-        ref: 'Category' 
+        ref: 'Category'
     }],
-    role:{
-        type:String,
-        enum:['ADMIN_ROLE','CLIENT_ROLE'],
-        default:'user'
+    role: {
+        type: String,
+        enum: ['ADMIN_ROLE', 'CLIENT_ROLE'],
+        default: 'user'
     },
-    estado:{
-        type:Boolean,
-        default:true
+    estado: {
+        type: Boolean,
+        default: true
     }
-})
+});
 
 UserSchema.methods.toJSON = function() {
-    const {__v,password,_id,...user} = this.toObject()
-    user.uid = _id
-    return user
-}
+    const { __v, password, _id, ...user } = this.toObject();
+    user.uid = _id;
+    return user;
+};
 
-export default model('User',UserSchema)
+export default model('User', UserSchema);

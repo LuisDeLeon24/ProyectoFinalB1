@@ -6,10 +6,10 @@ export const getCart = async (req, res) => {
         let carts;
 
         if (req.usuario.role === "ADMIN_ROLE") {
-            // Populate tanto los productos como el usuario
-            carts = await Cart.find().populate("products.product", "name price").populate("user", "username");
+            carts = await Cart.find()
+                .populate("products.product", "name price")
+                .populate("user", "username");
         } else {
-            // Populate tanto los productos como el usuario
             carts = await Cart.findOne({ user: req.usuario._id })
                 .populate("products.product", "name price")
                 .populate("user", "username");
@@ -18,7 +18,7 @@ export const getCart = async (req, res) => {
         if (!carts) {
             return res.status(404).json({
                 success: false,
-                message: "Carrito no encontrado"
+                message: "[controller] Carrito no encontrado"
             });
         }
 
@@ -29,7 +29,7 @@ export const getCart = async (req, res) => {
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: "Error al obtener el carrito",
+            message: "[controller] Error al obtener el carrito",
             error
         });
     }
@@ -41,7 +41,7 @@ export const addToCart = async (req, res) => {
     if (!Array.isArray(products) || products.length === 0) {
         return res.status(400).json({
             success: false,
-            message: "Debes agregar al menos un producto"
+            message: "[controller] Debes agregar al menos un producto"
         });
     }
 
@@ -54,16 +54,16 @@ export const addToCart = async (req, res) => {
         for (const { productId, quantity } of products) {
             const product = await Product.findById(productId);
             if (!product) {
-                return res.status(404).json({ 
-                    success: false, 
-                    message: `Producto con ID ${productId} no encontrado` 
+                return res.status(404).json({
+                    success: false,
+                    message: `[controller] Producto con ID ${productId} no encontrado`
                 });
             }
 
             if (product.stock < quantity) {
-                return res.status(400).json({ 
-                    success: false, 
-                    message: `Stock insuficiente para el producto ${product.name}` 
+                return res.status(400).json({
+                    success: false,
+                    message: `[controller] Stock insuficiente para el producto ${product.name}`
                 });
             }
 
@@ -76,7 +76,7 @@ export const addToCart = async (req, res) => {
                 if (newQuantity > product.stock) {
                     return res.status(400).json({
                         success: false,
-                        message: `No puedes agregar más productos de los que hay en stock para ${product.name}`
+                        message: `[controller] No puedes agregar más productos de los que hay en stock para ${product.name}`
                     });
                 }
 
@@ -84,23 +84,20 @@ export const addToCart = async (req, res) => {
             } else {
                 cart.products.push({ product: productId, quantity });
             }
-
-           
-            await product.save();
         }
 
         await cart.save();
 
-        res.status(200).json({ 
+        res.status(200).json({
             success: true,
-            message: "Productos agregados al carrito",
-            cart 
+            message: "[controller] Productos agregados al carrito",
+            cart
         });
     } catch (error) {
-        res.status(500).json({ 
+        res.status(500).json({
             success: false,
-            message: "Error al agregar productos", 
-            error 
+            message: "[controller] Error al agregar productos",
+            error
         });
     }
 };
@@ -110,9 +107,9 @@ export const removeFromCart = async (req, res) => {
     try {
         const cart = await Cart.findOne({ user: req.usuario._id });
         if (!cart) {
-            return res.status(404).json({ 
-                success: false, 
-                message: "Carrito no encontrado" 
+            return res.status(404).json({
+                success: false,
+                message: "[controller] Carrito no encontrado"
             });
         }
 
@@ -127,16 +124,16 @@ export const removeFromCart = async (req, res) => {
             await cart.save();
         }
 
-        res.status(200).json({ 
-            success: true, 
-            message: "Producto eliminado del carrito", 
-            cart 
+        res.status(200).json({
+            success: true,
+            message: "[controller] Producto eliminado del carrito",
+            cart
         });
     } catch (error) {
-        res.status(500).json({ 
-            success: false, 
-            message: "Error al eliminar producto", 
-            error 
+        res.status(500).json({
+            success: false,
+            message: "[controller] Error al eliminar producto",
+            error
         });
     }
 };
@@ -148,17 +145,16 @@ export const clearCart = async (req, res) => {
         if (!cart) {
             return res.status(404).json({
                 success: false,
-                message: "Carrito no encontrado"
+                message: "[controller] Carrito no encontrado"
             });
         }
 
-        
         for (const item of cart.products) {
             const product = item.product;
 
             if (product) {
                 product.stock += item.quantity;
-                await product.save(); 
+                await product.save();
             }
         }
 
@@ -166,12 +162,12 @@ export const clearCart = async (req, res) => {
 
         res.status(200).json({
             success: true,
-            message: "Carrito vaciado correctamente"
+            message: "[controller] Carrito vaciado correctamente"
         });
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: "Error al vaciar el carrito",
+            message: "[controller] Error al vaciar el carrito",
             error
         });
     }
